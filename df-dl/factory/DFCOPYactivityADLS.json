@@ -1,0 +1,9 @@
+{
+	"name": "DFCOPYactivityADLS",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e8810189-57f4-412f-b7d5-92c222220f12",
+		"tenantId": "9e91ab40-d64b-4652-907a-1e41be04c436"
+	}
+}
