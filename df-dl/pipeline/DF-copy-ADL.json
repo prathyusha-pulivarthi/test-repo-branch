@@ -1,0 +1,7 @@
+{
+	"name": "DF-copy-ADL",
+	"properties": {
+		"description": "Copy file from RAW zone to ref container to apply some rles on data",
+		"annotations": []
+	}
+}
