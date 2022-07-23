@@ -14,7 +14,8 @@
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "PRA-KV-SP1"
+				"secretName": "PRA-KV-SP1",
+				"secretVersion": "f6ff88f7265c45229e2e4b588eda8224"
 			},
 			"accountKind": "StorageV2"
 		}
