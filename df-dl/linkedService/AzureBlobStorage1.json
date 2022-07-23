@@ -1,22 +1,15 @@
 {
 	"name": "AzureBlobStorage1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
 			"serviceEndpoint": "https://storagefordlzen2.blob.core.windows.net/",
 			"tenant": "9e91ab40-d64b-4652-907a-1e41be04c436",
-			"servicePrincipalId": "380e7712-507f-4ab8-8bf2-89d0b5888bcf",
-			"servicePrincipalKey": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "AzureKeyVault1",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "PRA-KV-SP1",
-				"secretVersion": "f6ff88f7265c45229e2e4b588eda8224"
-			},
-			"accountKind": "StorageV2"
+			"servicePrincipalId": "384ea1ab-5342-4979-9567-e1bd3f7c747d",
+			"accountKind": "StorageV2",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDI2MTZGNEI4LUZBNEYtNEIyRC04ODc0LUI0NDk3NDVEMTg0NF82NjRiM2EzYy0wMjVmLTRlNTUtYWJjNC1mODU5MzFmZjkwYjgiDQp9"
 		}
 	}
 }
