@@ -2,6 +2,92 @@
 	"name": "DF-copy-ADL",
 	"properties": {
 		"description": "Copy file from RAW zone to ref container to apply some rles on data",
+		"activities": [
+			{
+				"name": "Copy data1_copy1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": true
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BinarySource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "BinaryReadSettings"
+						}
+					},
+					"sink": {
+						"type": "BinarySink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Binary1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DSop",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Delete1",
+				"description": "Delete after Copy process  done",
+				"type": "Delete",
+				"dependsOn": [
+					{
+						"activity": "Copy data1_copy1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "Binary1",
+						"type": "DatasetReference"
+					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "deletelog"
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					}
+				}
+			}
+		],
 		"annotations": []
 	}
 }
