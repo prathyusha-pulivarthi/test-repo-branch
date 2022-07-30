@@ -163,7 +163,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataset": {
-								"referenceName": "DSop",
+								"referenceName": "Binary1",
 								"type": "DatasetReference",
 								"parameters": {}
 							},
