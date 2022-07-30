@@ -111,7 +111,9 @@
 						"referenceName": "DSop",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"enablePartitionDiscovery": false
@@ -132,7 +134,17 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@activity('Get Metadata1').output.childItemsactivity('Get Metadata1').output.childItemscontains(0), item().name",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
