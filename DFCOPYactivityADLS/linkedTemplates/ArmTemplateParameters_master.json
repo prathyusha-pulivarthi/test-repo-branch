@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DFCOPYactivityADLS"
+		},
+		"AccountKeyLS_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://storagefordlzen2.blob.core.windows.net/"
+		},
+		"AzureBlobStorage1_properties_typeProperties_tenant": {
+			"value": "9e91ab40-d64b-4652-907a-1e41be04c436"
+		},
+		"AzureBlobStorage1_properties_typeProperties_servicePrincipalId": {
+			"value": "384ea1ab-5342-4979-9567-e1bd3f7c747d"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storagefordlzen2.dfs.core.windows.net/"
+		},
+		"Storage_event Trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/5191bbda-56f6-41e1-a317-0743134a817e/resourceGroups/PRA-RS-GRP2/providers/Microsoft.Storage/storageAccounts/prastorageadls2"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
