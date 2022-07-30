@@ -141,7 +141,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@contains(activity('Get Metadata1').output.childItemsactivity('Get Metadata1').output.childItemscontains(0), item().name)",
+						"value": "@contains(activity('Get Metadata1').output.childItemsactivity('Get Metadata1').output.childItemscontains(0).name, item().name)",
 						"type": "Expression"
 					}
 				}
