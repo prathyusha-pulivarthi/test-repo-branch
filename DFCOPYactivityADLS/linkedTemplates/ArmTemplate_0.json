@@ -259,7 +259,14 @@
 					{
 						"name": "Get Metadata1",
 						"type": "GetMetadata",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Set variable1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -279,6 +286,7 @@
 							],
 							"storeSettings": {
 								"type": "AzureBlobStorageReadSettings",
+								"recursive": true,
 								"enablePartitionDiscovery": false
 							},
 							"formatSettings": {
@@ -308,11 +316,34 @@
 								"type": "Expression"
 							}
 						}
+					},
+					{
+						"name": "Set variable1",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "TokenId",
+							"value": {
+								"value": "@pipeline().parameters.Input_Filename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"parameters": {
+					"Input_Filename": {
+						"type": "string"
+					}
+				},
+				"variables": {
+					"TokenId": {
+						"type": "String"
+					}
 				},
 				"annotations": []
 			},
