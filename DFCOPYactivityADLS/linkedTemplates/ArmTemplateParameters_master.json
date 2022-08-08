@@ -29,6 +29,9 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://storagefordlzen2.dfs.core.windows.net/"
 		},
+		"Storage_event Trigger_properties_DF-copy-ADL_parameters_Input_Filename": {
+			"value": "ChatLog"
+		},
 		"Storage_event Trigger_properties_typeProperties_scope": {
 			"value": "/subscriptions/5191bbda-56f6-41e1-a317-0743134a817e/resourceGroups/PRA-RS-GRP2/providers/Microsoft.Storage/storageAccounts/prastorageadls2"
 		},

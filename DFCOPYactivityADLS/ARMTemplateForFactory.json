@@ -39,6 +39,10 @@
 			"type": "string",
 			"defaultValue": "https://storagefordlzen2.dfs.core.windows.net/"
 		},
+		"Storage_event Trigger_properties_DF-copy-ADL_parameters_Input_Filename": {
+			"type": "string",
+			"defaultValue": "ChatLog"
+		},
 		"Storage_event Trigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/5191bbda-56f6-41e1-a317-0743134a817e/resourceGroups/PRA-RS-GRP2/providers/Microsoft.Storage/storageAccounts/prastorageadls2"
@@ -431,7 +435,9 @@
 							"referenceName": "DF-copy-ADL",
 							"type": "PipelineReference"
 						},
-						"parameters": {}
+						"parameters": {
+							"Input_Filename": "[parameters('Storage_event Trigger_properties_DF-copy-ADL_parameters_Input_Filename')]"
+						}
 					}
 				],
 				"type": "BlobEventsTrigger",
