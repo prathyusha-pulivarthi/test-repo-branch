@@ -17,6 +17,7 @@
 				"frequency": "Minute",
 				"interval": 15,
 				"startTime": "2022-08-08T17:00:00Z",
+				"endTime": "2022-08-09T11:52:18Z",
 				"timeZone": "UTC"
 			}
 		}
