@@ -17,6 +17,9 @@
 		"linkedService1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage_ls2_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://storagefordlzen2.blob.core.windows.net/"
 		},

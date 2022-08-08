@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedService1'"
 		},
+		"AzureBlobStorage_ls2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage_ls2'"
+		},
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://storagefordlzen2.blob.core.windows.net/"
@@ -85,6 +89,9 @@
 					},
 					"linkedService1_connectionString": {
 						"value": "[parameters('linkedService1_connectionString')]"
+					},
+					"AzureBlobStorage_ls2_connectionString": {
+						"value": "[parameters('AzureBlobStorage_ls2_connectionString')]"
 					},
 					"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
