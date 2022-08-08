@@ -8,6 +8,9 @@
 				"pipelineReference": {
 					"referenceName": "DF-copy-ADL",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Input_Filename": "ChatLog"
 				}
 			}
 		],
